@@ -1,6 +1,6 @@
 package ćwiczenia;
 
-public class Human {
+public class Human implements Humaninterface  {
     protected double wzrost;
     protected char plec; // m - mezczyzna // k - kobieta // c - cos innego
     protected double rozmiar_buta;
@@ -16,10 +16,45 @@ public class Human {
 
     static long liczba_ludzi_na_ziemi = 7800000000l;
 
-
     static void nowy_czlowiek(){
         liczba_ludzi_na_ziemi++;
     }
+
+    @Override
+    public void work(String where, int za_ile ) {
+    this.work("Pracuje"+ where +int + za_ile);
+
+    }
+    @Override
+    public void learn(String czego){
+        this.learn("Czego się uczę "+ czego );
+    }
+
+    @Override
+    public void run() {
+        this.run();
+
+    }
+
+    @Override
+    public Human give_birth() {
+        return null;
+    }
+
+    @Override
+    public void jedz() {
+    this.jedz();
+
+    }
+
+    @Override
+    public void choruje() {
+    this.choruje();
+
+    }
+
+
+
 
 
 
