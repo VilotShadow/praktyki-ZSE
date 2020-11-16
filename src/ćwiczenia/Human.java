@@ -1,6 +1,6 @@
 package ćwiczenia;
 
-public class Human implements Humaninterface  {
+public class Human implements HumanInterface{
     protected double wzrost;
     protected char plec; // m - mezczyzna // k - kobieta // c - cos innego
     protected double rozmiar_buta;
@@ -16,23 +16,23 @@ public class Human implements Humaninterface  {
 
     static long liczba_ludzi_na_ziemi = 7800000000l;
 
+
     static void nowy_czlowiek(){
         liczba_ludzi_na_ziemi++;
     }
 
-    @Override
-    public void work(String where, int za_ile ) {
-    this.work("Pracuje"+ where +int + za_ile);
 
-    }
-    @Override
-    public void learn(String czego){
-        this.learn("Czego się uczę "+ czego );
+    public void work(String where, int za_ile){
+        System.out.println("pracuje w " + where + "i zarabiam " + za_ile);
     }
 
     @Override
-    public void run() {
-        this.run();
+    public void learn(String czego) {
+
+    }
+
+    @Override
+    public void run_forest() {
 
     }
 
@@ -43,20 +43,18 @@ public class Human implements Humaninterface  {
 
     @Override
     public void jedz() {
-    this.jedz();
 
     }
 
     @Override
     public void choruje() {
-    this.choruje();
 
     }
 
-
-
-
-
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 
     void setColor_wlosow(String color){
         if(!czy_lysy){
@@ -122,8 +120,7 @@ public class Human implements Humaninterface  {
     public Human() {
     }
 
-    public Human(double wzrost, char plec, double rozmiar_buta, boolean czy_lysy, String color_wlosow, int wiek, Human[] rodzice)
-    {
+    public Human(double wzrost, char plec, double rozmiar_buta, boolean czy_lysy, String color_wlosow, int wiek, Human[] rodzice) {
         this.wzrost = wzrost;
         this.plec = plec;
         this.rozmiar_buta = rozmiar_buta;
@@ -135,4 +132,3 @@ public class Human implements Humaninterface  {
 
 
 }
-

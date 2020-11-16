@@ -1,12 +1,12 @@
 package ćwiczenia;
 
-public interface Humaninterface {
+interface HumanInterface {
 
-    void work(String where , int za_ile );
+    void work(String where, int za_ile);
 
-    void learn( String czego);
+    void learn(String czego);
 
-    void run();
+    void run_forest();
 
     Human give_birth();
 
