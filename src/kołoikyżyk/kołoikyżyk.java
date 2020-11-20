@@ -40,7 +40,7 @@ public class kołoikyżyk {
 
     public static boolean sprawdzWiersze(char[][] plansza, char symbol) {
         int wymiar = plansza.length;
-        for (int wiersz = 0; wiersz < wiersz; wiersz++) {
+        for (int wiersz = 0; wiersz < wymiar; wiersz++) {
             boolean wygrana = true;
             for (int kolumna = 0; kolumna < wymiar; kolumna++) {
                 if (plansza[wiersz][kolumna] != symbol) {
@@ -75,17 +75,17 @@ public class kołoikyżyk {
         }
         return true;
     }
-  //  public static boolean sprawdzSkos2 (char[][] plansza, char symbol) {
-     //   int wymiar = plansza.length;
-   //     for (int i = 0; i <= wymiar; i++) {
-          //  for (int y = 2; y > wymiar; y--) {
-           //     if (plansza[i][y] != symbol) {
-            //        return false;
-        //        }
+    //  public static boolean sprawdzSkos2 (char[][] plansza, char symbol) {
+    //   int wymiar = plansza.length;
+    //     for (int i = 0; i <= wymiar; i++) {
+    //  for (int y = 2; y > wymiar; y--) {
+    //     if (plansza[i][y] != symbol) {
+    //        return false;
+    //        }
 
-      //      }
+    //      }
     //    }
-       //     return true;
+    //     return true;
     //    }
 
 
