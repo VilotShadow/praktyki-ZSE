@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class kołoikyżyk {
     public static void main(String[] args) {
-        System.out.println("Witaj w grze podaj rozmiary planszy ");
+        System.out.println((char) 27 + "[01;35m  Witaj w grze podaj rozmiary planszy "+ (char) 27 + "[00;00m");
         int wymiar = new Scanner(System.in).nextInt();
         char symbolobecnegoGracza = 'X';
         char[][] plansza = new char[wymiar][wymiar];
@@ -21,7 +21,7 @@ public class kołoikyżyk {
                 boolean wygranaSkos1 = sprawdzSkos1(plansza, symbolobecnegoGracza);
                 //boolean wygranaSkos2 = sprawdzSkos2(plansza, symbolobecnegoGracza);
                 if(wygranaWiersze || wygranaKolumny || wygranaSkos1 ){
-                    System.out.println( " SUPER WYGRANA "+ symbolobecnegoGracza);
+                    System.out.println( (char) 27 + "[01;92m  SUPER WYGRANA "+ symbolobecnegoGracza+ (char) 27 + "[00;00m");
                     czyKontynuować = false;
                 }
                 symbolobecnegoGracza = symbolobecnegoGracza == 'X' ? 'O' : 'X';
@@ -91,13 +91,13 @@ public class kołoikyżyk {
 
     public static boolean wykonajRuch(char[][] plansza, char symbol) {
         System.out.println(symbol + " Twój ruch");
-        System.out.println(" Podaj indeks wiersza ");
+        System.out.println((char) 27 + "[01;96m  Podaj indeks wiersza "+ (char) 27 + "[00;00m");
         int wiersz = new Scanner(System.in).nextInt();
-        System.out.println(" Popdaj Kolumne ");
+        System.out.println((char) 27 + "[01;33m Popdaj Kolumne "+ (char) 27 + "[00;00m");
         int kolumna = new Scanner(System.in).nextInt();
         boolean ruchpoprawny = plansza[wiersz][kolumna] == 0;
         if (!ruchpoprawny) {
-            System.out.println(" Dupa coś tam jest i zły ruch ");
+            System.out.println((char) 27 + "[01;96m Dupa jest tam jakiś znak tracisz kolejkę głąbie "+ (char) 27 + "[00;00m");
             return false;
         }
         plansza[wiersz][kolumna] = symbol;
@@ -109,10 +109,10 @@ public class kołoikyżyk {
         int wymiar = plansza.length;
 
         //nagłówki kolumn
-        System.out.print("\t");
+        System.out.print( " \t");
         //pętla pokazująca nagłówki kolumn
         for (int i = 0; i < wymiar; i++) {
-            System.out.print(i + "\t");
+            System.out.print(i +" \t");
         }
         System.out.println();
         //drukowanie wierszy
